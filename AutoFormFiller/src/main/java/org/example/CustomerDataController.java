@@ -31,7 +31,7 @@ public class CustomerDataController {
         InsuranceDetailsResponse response = new InsuranceDetailsResponse();
         response.setFirstName(payload.getFirstName());
         response.setLastName(payload.getLastName());
-        response.setNino(payload.getNino());
+        response.setNino(payload.getIdNumber());
         response.setDateOfBirth(payload.getDateOfBirth());
         response.setPostcode(payload.getPostcode());
         response.setGender("M");

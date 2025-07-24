@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 class CustomerPensionDataService {
 
     public CustomerPensionFormResponse fetchPensionFormData(CustomerPensionFormPayload payload) {
-        if ("111122223333".equals(payload.getNino())) {
+        if ("111122223333".equals(payload.getIdNumber())) {
             CustomerPensionFormResponse notFoundResponse = new CustomerPensionFormResponse();
             notFoundResponse.setFirstName("");
             notFoundResponse.setLastName("");
-            notFoundResponse.setNino(payload.getNino());
+            notFoundResponse.setIdNumber(payload.getIdNumber());
             notFoundResponse.setDateOfBirth("");
             notFoundResponse.setAddress("");
             notFoundResponse.setPostalcode(payload.getPostcode());
@@ -24,9 +24,9 @@ class CustomerPensionDataService {
         // Populate with request data and mock values
         response.setFirstName(payload.getFirstName());
         response.setLastName(payload.getLastName());
-        response.setNino(payload.getNino());
+        response.setIdNumber(payload.getIdNumber());
         response.setDateOfBirth(payload.getDateOfBirth());
-        response.setAddress("10 Downing Street, London");
+        response.setAddress("10 Downing Street");
         response.setPostalcode(payload.getPostcode());
         response.setAccountNumber("4567987634561289");
         response.setPensionScheme("Regular");

@@ -4,7 +4,7 @@ public class CustomerPensionFormResponse {
 
     private String firstName;
     private String lastName;
-    private String nino;
+    private String idNumber;
     private String dateOfBirth;
     private String address;
     private String postalcode;
@@ -16,8 +16,8 @@ public class CustomerPensionFormResponse {
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public String getLastName() { return lastName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
-    public String getNino() { return nino; }
-    public void setNino(String nino) { this.nino = nino; }
+    public String getIdNumber() { return idNumber; }
+    public void setIdNumber(String idNumber) { this.idNumber = idNumber; }
     public String getDateOfBirth() { return dateOfBirth; }
     public void setDateOfBirth(String dateOfBirth) { this.dateOfBirth = dateOfBirth; }
     public String getAddress() { return address; }
