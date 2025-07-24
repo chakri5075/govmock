@@ -17,7 +17,7 @@ class CustomerPensionDataService {
             notFoundResponse.setLastName(payload.getLastName());
             notFoundResponse.setIdNumber(payload.getIdNumber());
             notFoundResponse.setDateOfBirth(payload.getDateOfBirth());
-            notFoundResponse.setAddress("");
+            notFoundResponse.setAddress("3 London street");
             notFoundResponse.setPostalcode(payload.getPostcode());
             notFoundResponse.setAccountNumber("");
             notFoundResponse.setPensionScheme("");
