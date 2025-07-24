@@ -11,19 +11,17 @@ class CustomerPensionDataService {
 
     public CustomerPensionFormResponse fetchPensionFormData(CustomerPensionFormPayload payload) {
         logger.info("Entered fetchPensionFormData method");
-        if ("111122223333".equals(payload.getIdNumber())) {
-            logger.info("ID not found: {}", payload.getIdNumber());
+       if ("SMITH807152JD99".equals(payload.getIdNumber())) {
             CustomerPensionFormResponse notFoundResponse = new CustomerPensionFormResponse();
-            notFoundResponse.setFirstName("");
-            notFoundResponse.setLastName("");
+            notFoundResponse.setFirstName(payload.getFirstName());
+            notFoundResponse.setLastName(payload.getLastName());
             notFoundResponse.setIdNumber(payload.getIdNumber());
-            notFoundResponse.setDateOfBirth("");
+            notFoundResponse.setDateOfBirth(payload.getDateOfBirth());
             notFoundResponse.setAddress("");
             notFoundResponse.setPostalcode(payload.getPostcode());
             notFoundResponse.setAccountNumber("");
-            notFoundResponse.setPensionScheme("details not found");
-            notFoundResponse.setTotalAmountDeposited("");
-            logger.info("Exiting fetchPensionFormData method with not found response");
+            notFoundResponse.setPensionScheme("");
+            notFoundResponse.setTotalAmountDeposited("0");
             return notFoundResponse;
         }
 
